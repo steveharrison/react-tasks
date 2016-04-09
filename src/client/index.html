@@ -9,6 +9,11 @@
     		font-family: HelveticaNeue;
     	}
 
+      ::selection {
+        color: white;
+        background: black;
+      }
+
       .container {
         max-width: 400px;
         margin: auto;
@@ -31,10 +36,13 @@
   		}
 
   		input:focus {
-  			color: black;
   			outline: none;
-  			border-bottom: 2px solid black;
+  			border-color: black;
   		}
+
+      input, input:focus + label {
+        color: black;
+      }
 
       label {
         font-size: 12px;
