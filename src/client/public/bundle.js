@@ -20389,7 +20389,16 @@
 	  }, {
 	    key: "render",
 	    value: function render() {
-	      return _react2.default.createElement("input", { type: "text", value: this.state.description, onChange: this.updateField });
+	      return _react2.default.createElement(
+	        "li",
+	        { className: "task" },
+	        _react2.default.createElement("input", { type: "checkbox", checked: this.props.checked }),
+	        _react2.default.createElement(
+	          "label",
+	          null,
+	          this.props.description
+	        )
+	      );
 	    }
 	  }]);
 	
@@ -20417,6 +20426,10 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
+	var _Task = __webpack_require__(/*! ./Task.jsx */ 161);
+	
+	var _Task2 = _interopRequireDefault(_Task);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -20441,17 +20454,7 @@
 	        'ul',
 	        null,
 	        this.props.data.map(function (task) {
-	          return _react2.default.createElement(
-	            'li',
-	            null,
-	            task.description,
-	            ' ',
-	            _react2.default.createElement(
-	              'span',
-	              null,
-	              task.done.toString()
-	            )
-	          );
+	          return _react2.default.createElement(_Task2.default, { description: task.description, done: task.done });
 	        })
 	      );
 	    }
@@ -20525,7 +20528,7 @@
 	    value: function render() {
 	      return _react2.default.createElement(
 	        'div',
-	        null,
+	        { className: 'add-task' },
 	        _react2.default.createElement('input', { id: 'addTaskField', type: 'text', value: this.state.description, onChange: this.updateField, onKeyDown: this.onKeyDown }),
 	        _react2.default.createElement(
 	          'label',

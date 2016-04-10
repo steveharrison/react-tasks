@@ -27,7 +27,12 @@
         margin-bottom: 20px;
       }
 
-  		input {
+      .task-checkbox {
+        display: inline-block;
+        margin-right: 20px;
+      }
+
+  		.add-task input {
         width: 100%;
   			font-size: 20px;
   			border: none;
@@ -35,16 +40,16 @@
         padding: 0;
   		}
 
-  		input:focus {
+  		.add-task input:focus {
   			outline: none;
   			border-color: black;
   		}
 
-      input, input:focus + label {
+      .add-task input, .add-task input:focus + label {
         color: black;
       }
 
-      label {
+      .add-task label {
         font-size: 12px;
         display: block;
         margin-top: 10px;
@@ -56,8 +61,7 @@
         padding: 0;
       }
 
-      li {
-        display: block;
+      .task {
         list-style-type: none;
         margin-bottom: 10px;
         font-size: 20px;

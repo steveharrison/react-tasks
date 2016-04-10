@@ -14,7 +14,10 @@ class Task extends React.Component {
 
   render() {
     return (
-      <input type="text" value={this.state.description} onChange={this.updateField} />
+      <li className="task">
+        <input type="checkbox" checked={this.props.checked} />
+        <label>{this.props.description}</label>
+      </li>
     );
   }
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import Task from './Task.jsx';
 
 class TaskList extends React.Component {
 
@@ -6,7 +7,7 @@ class TaskList extends React.Component {
     return (
       <ul>
       {this.props.data.map(function(task) {
-    		return <li>{task.description} <span>{task.done.toString()}</span></li>;
+    		return <Task description={task.description} done={task.done} />;
     	})}
       </ul>
     );

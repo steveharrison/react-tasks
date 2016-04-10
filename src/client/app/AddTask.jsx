@@ -26,8 +26,7 @@ class AddTask extends React.Component {
 
   render() {
     return (
-      <div>
-        {/* <label htmlFor="addTaskField">Add task</label> */}
+      <div className="add-task">
         <input id="addTaskField" type="text" value={this.state.description} onChange={this.updateField} onKeyDown={this.onKeyDown} />
         <label htmlFor="addTaskField">Create a new task (press <strong>Enter</strong> to add)</label>
       </div>
